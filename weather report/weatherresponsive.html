@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <script src="weatherresponsive.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="bg-blue-50 min-h-screen flex flex-col lg:flex-row">
+
+    <!-- Sidebar / Topbar -->
+    <aside class="w-full lg:w-64 bg-white shadow-md p-6 flex flex-col lg:justify-between justify-start gap-6">
+      <div>
+        <h2 class="text-xl font-bold text-blue-600">WI-API</h2>
+        <nav class="flex flex-col lg:gap-4 gap-2 text-gray-700 mt-4 lg:mt-0">
+          <a href="#" class="hover:text-blue-600">Home</a>
+          <a href="#" class="hover:text-blue-600">Settings</a>
+          <a href="#" class="hover:text-blue-600">Search</a>
+        </nav>
+      </div>
+      <div class="mt-auto lg:mt-0">
+      <img src="https://i.pinimg.com/736x/a7/80/6d/a7806d36d9f973b796d0aab6b85bec1c.jpg" alt="Profile image" class="w-16 h-16 rounded-full bg-gray-200 object-cover" />
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex items-center justify-center p-6 sm:p-10">
+      <div class="bg-white w-full max-w-2xl p-6 sm:p-10 rounded-xl shadow-md text-center">
+        <p class="text-gray-500 text-xl sm:text-2xl mb-6 sm:mb-8">
+          Hello, <span class="font-semibold text-black block">Ready to<br class="hidden sm:block"/>Know the weather of your City?</span>
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 sm:mb-8">
+          <input id="cityInput" class="border border-blue-600 rounded-md px-4 py-2 text-base sm:text-lg w-full sm:w-2/3" type="text" placeholder="Enter city name">
+          <button id="getWeatherBtn" onclick="getData()" class="bg-black text-white px-4 py-2 rounded-md font-semibold w-full sm:w-auto">Get Weather</button>
+        </div>
+
+        <div id="weatherResult" class="bg-gray-100 p-4 rounded-md flex flex-col md:flex-row justify-between items-center gap-4 text-left sm:text-center md:text-left">
+          <div class="w-full md:w-1/2">
+            <p id="city-name-para" class="font-semibold text-lg">City Name</p>
+            <p id="latitude" class="text-sm text-gray-500">00:00 GMT+5</p>
+          </div>
+          <div class="flex items-center justify-center gap-4 w-full md:w-1/2">
+            <p id="temprature" class="text-2xl font-bold">25°C</p>
+            <img id="weatherIcon" src="https://i.pinimg.com/736x/7c/44/de/7c44de4d01345d182d239f4ea037f471.jpg" alt="Weather Icon" class="w-10 h-10 object-cover">
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

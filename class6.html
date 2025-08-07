@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Mini Projects (1-10)</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    section { margin-bottom: 30px; border: 1px solid #ccc; padding: 10px; }
+  </style>
+</head>
+<body>
+  
+  <!-- 1. Show Greeting -->
+  <section>
+    <h3>1. Show Greeting</h3>
+    <input id="name" placeholder="Enter name" />
+    <button onclick="greetUser()">Greet</button>
+    <p id="greet"></p>
+  </section>
+
+  <!-- 2. Color Selector Message -->
+  <section>
+    <h3>2. Color Selector Message</h3>
+    <select onchange="selectColor(this)">
+      <option value="">Choose</option>
+      <option value="Red">Red</option>
+      <option value="Green">Green</option>
+    </select>
+    <div></div>
+  </section>
+
+  <!-- 3. Show/Hide Paragraph -->
+  <section>
+    <h3>3. Show/Hide Paragraph</h3>
+    <button onclick="toggleParagraph()">Toggle Paragraph</button>
+    <p>This is a toggle paragraph.</p>
+  </section>
+
+  <!-- 4. Check Age for Voting -->
+  <section>
+    <h3>4. Check Age for Voting</h3>
+    <input id="age" placeholder="Enter age" type="number" />
+    <button onclick="checkVoting()">Check</button>
+    <p></p>
+  </section>
+
+  <!-- 5. Add Text to Page -->
+  <section>
+    <h3>5. Add Text to Page</h3>
+    <input placeholder="Enter message" />
+    <button onclick="addMessage()">Add</button>
+  </section>
+
+  <!-- 6. Make Text Bold -->
+  <section>
+    <h3>6. Make Text Bold</h3>
+    <p id="info">Make me bold!</p>
+    <button onclick="boldText()">Bold</button>
+  </section>
+
+  <!-- 7. Simple Sum -->
+  <section>
+    <h3>7. Simple Sum</h3>
+    <input id="n1" type="number" placeholder="Number 1" />
+    <input id="n2" type="number" placeholder="Number 2" />
+    <button onclick="showSum()">Sum</button>
+    <p></p>
+  </section>
+
+  <!-- 8. Set Heading Text -->
+  <section>
+    <h3>8. Set Heading Text</h3>
+    <input oninput="setHeading(this)" placeholder="Change heading" />
+    <h1 id="title">Live Heading</h1>
+  </section>
+
+  <!-- 9. Click Counter -->
+  <section>
+    <h3>9. Click Counter</h3>
+    <button onclick="incrementCount()">Click</button>
+    Count: <span id="count">0</span>
+  </section>
+
+  <!-- 10. Clear Text -->
+  <section>
+    <h3>10. Clear Text</h3>
+    <input placeholder="Type something" />
+    <button onclick="clearInput()">Clear</button>
+  </section>
+</body>
+</html>

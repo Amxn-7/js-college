@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiggy UI Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="p-4">
+      <!-- Filters Bar -->
+      <div class="flex flex-wrap gap-2 text-sm font-medium text-gray-700 mb-4">
+        <button class="bg-gray-200 px-3 py-1 rounded">Filter</button>
+        <button class="bg-gray-200 px-3 py-1 rounded">Sort By</button>
+        <button class="bg-gray-200 px-3 py-1 rounded">Fast Delivery</button>
+        <button class="bg-gray-200 px-3 py-1 rounded">Ratings 4.0+</button>
+        <button class="bg-gray-200 px-3 py-1 rounded">Pure Veg</button>
+        <button class="bg-gray-200 px-3 py-1 rounded">Offers</button>
+        <button class="bg-gray-200 px-3 py-1 rounded">Rs. 300-Rs. 600</button>
+        <button class="bg-gray-200 px-3 py-1 rounded">Less than Rs. 300</button>
+        <input type="text" placeholder="Search for restaurant and food" class="ml-auto px-3 py-1 border rounded w-64" />
+      </div>
+
+      <!-- Grid Layout -->
+      <div class="grid grid-cols-4 gap-4">
+        <!-- Card Template -->
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="https://i.pinimg.com/736x/b2/d8/4f/b2d84f98d8954af7aea3cbc6c252c663.jpg" alt="Pizza Hut" class="w-full h-40 object-cover" />
+          <div class="p-3">
+            <p class="text-green-600 font-bold text-xs mb-1">ITEMS AT ₹99</p>
+            <h3 class="text-lg font-semibold">Pizza Hut</h3>
+            <p class="text-sm text-gray-600">🍴 4.3 • 40-45 mins</p>
+            <p class="text-sm text-gray-500">Pizza, Parasia Road</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="https://i.pinimg.com/1200x/1e/8b/5e/1e8b5eb4205f172d11fd08efe848bce1.jpg" alt="Raimens" class="w-full h-40 object-cover" />
+          <div class="p-3">
+            <p class="text-green-600 font-bold text-xs mb-1">₹131 OFF ABOVE ₹349
+            </p>
+            <h3 class="text-lg font-semibold">Raimens Cafe 79</h3>
+            <p class="text-sm text-gray-600">🍴 4.4 • 40-45 mins</p>
+            <p class="text-sm text-gray-500">Bakery, Pizzas, Snacks...</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="https://i.pinimg.com/736x/0f/5c/e2/0f5ce29e8315dac3d1eb6f7f498640ce.jpg" alt="Bakery World" class="w-full h-40 object-cover" />
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">Bakery World</h3>
+            <p class="text-sm text-gray-600">🍴 4.3 • 35-40 mins</p>
+            <p class="text-sm text-gray-500">Bakery, Ice Cream, Snacks...</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="https://i.pinimg.com/736x/8b/36/9f/8b369fefca44952ef36cc09f830c00e7.jpg" alt="Burger House" class="w-full h-40 object-cover" />
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">The Burger House</h3>
+            <p class="text-sm text-gray-600">🍴 3.7 • 40-45 mins</p>
+            <p class="text-sm text-gray-500">Beverages, Fast Food...</p>
+          </div>
+        </div>
+
+        <!-- 2nd row -->
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="https://i.pinimg.com/736x/d1/21/10/d1211018fc48880eb4f3f5fd0ad4427e.jpg" alt="Urban Cafe" class="w-full h-40 object-cover" />
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">Urban Cafe</h3>
+            <p class="text-sm text-gray-600">🍴 3.8 • 45-50 mins</p>
+            <p class="text-sm text-gray-500">Snacks, Pizza, Chhindwara City</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="https://i.pinimg.com/1200x/c6/95/5d/c6955d5dd80c74e2370deb91b7cc3e11.jpg" alt="Coffee House" class="w-full h-40 object-cover" />
+          <div class="p-3">
+            <h3 class="text-lg font-semibold">Indian Coffee House</h3>
+            <p class="text-sm text-gray-600">🍴 4.4 • 35-40 mins</p>
+            <p class="text-sm text-gray-500">South Indian, Kingji Chowk</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="https://i.pinimg.com/736x/f9/69/49/f96949c0e08f10660a9ed039b5bf53a3.jpg" alt="Sattkar" class="w-full h-40 object-cover" />
+          <div class="p-3">
+            <p class="text-green-600 font-bold text-xs mb-1">₹111 OFF ABOVE ₹499
+            </p>
+            <h3 class="text-lg font-semibold">Sattkar Restaurant</h3>
+            <p class="text-sm text-gray-600">🍴 4.3 • 35-45 mins</p>
+            <p class="text-sm text-gray-500">South Indian, Salad...</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg overflow-hidden shadow">
+          <img src="https://i.pinimg.com/736x/52/02/cd/5202cd96d93aacf1afc7e88e62afcd7c.jpg" alt="Hotel Sai Nath" class="w-full h-40 object-cover" />
+          <div class="p-3">
+            <p class="text-green-600 font-bold text-xs mb-1">ITEMS AT ₹33</p>
+            <h3 class="text-lg font-semibold">Hotel Sai Nath & Sai...</h3>
+            <p class="text-sm text-gray-600">🍴 4.3 • 30-35 mins</p>
+            <p class="text-sm text-gray-500">North Indian, Chhindwara</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

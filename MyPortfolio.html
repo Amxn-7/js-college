@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-indigo-600">My Portfolio</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="text-gray-700 hover:text-indigo-600">About</a>
+        <a href="#projects" class="text-gray-700 hover:text-indigo-600">Projects</a>
+        <a href="#contact" class="text-gray-700 hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-indigo-600 text-white py-20 text-center">
+    <div class="container mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Aman, Aman Singh</h2>
+      <p class="text-xl md:text-2xl">Web Developer | Designer | Tech Enthusiast</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6">About Me</h3>
+      <p class="max-w-2xl mx-auto text-lg text-gray-700">
+        I'm a passionate web developer with experience in building modern, responsive websites using HTML, CSS, JavaScript, and frameworks like Tailwind CSS. I love transforming ideas into beautiful, functional websites.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Projects</h3>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-white shadow-md rounded p-6">
+          <h4 class="text-xl font-semibold mb-2">Project One</h4>
+          <p class="text-gray-600 mb-4">A responsive portfolio built using Tailwind CSS and vanilla JavaScript.</p>
+          <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white shadow-md rounded p-6">
+          <h4 class="text-xl font-semibold mb-2">Project Two</h4>
+          <p class="text-gray-600 mb-4">An e-commerce landing page created using React and Tailwind.</p>
+          <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white shadow-md rounded p-6">
+          <h4 class="text-xl font-semibold mb-2">Project Three</h4>
+          <p class="text-gray-600 mb-4">A blog platform backend with Node.js and MongoDB integration.</p>
+          <a href="#" class="text-indigo-600 hover:underline">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+      <p class="mb-4 text-gray-700">Interested in working together or have a question?</p>
+      <a href="mailto:your.email@example.com" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700">
+        Say Hello   
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 mt-10 text-center">
+    <p>&copy; 2025 Aman Singh. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

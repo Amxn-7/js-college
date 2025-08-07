@@ -1,0 +1,270 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Array Operations Projects</title>
+</head>
+<body>
+  <h2>1. Display Array of Names</h2>
+  <button onclick="showNames()">Show Names</button>
+  <div id="namesContainer"></div>
+
+  <h2>2. Show Array Length</h2>
+  <button onclick="showLength()">Show Fruit Count</button>
+  <p id="fruitCount"></p>
+
+  <h2>3. Access First and Last City</h2>
+  <button onclick="showCities()">Show Cities</button>
+  <p id="firstCity"></p>
+  <p id="lastCity"></p>
+
+  <h2>4. Change Color in Array</h2>
+  <button onclick="changeColor()">Change Color</button>
+  <p id="colorsOutput"></p>
+
+  <h2>5. Loop Through Animal Array</h2>
+  <button onclick="listAnimals()">Show Animals</button>
+  <ul id="animalList"></ul>
+
+  <h2>6. Push and Print Country</h2>
+  <button onclick="addCountry()">Add Country</button>
+  <div id="countriesOutput"></div>
+
+  <h2>7. Sort Numbers</h2>
+  <button onclick="sortNumbers()">Sort</button>
+  <p id="sortedNumbers"></p>
+
+  <h2>8. Join Words into Sentence</h2>
+  <button onclick="joinWords()">Join Words</button>
+  <p id="sentenceOutput"></p>
+
+  <h2>9. Reverse Days</h2>
+  <button onclick="reverseDays()">Reverse Days</button>
+  <p id="daysOutput"></p>
+
+  <h2>10. Show Last Student Name</h2>
+  <button onclick="showLastStudent()">Show Last Name</button>
+  <p id="lastStudent"></p>
+
+  <input type="text" id="ip">
+  <button onclick="addName()" id="btn">Add</button>
+  <div id="op"></div>
+
+  <script>
+    // 1
+    let names = ["Amit", "Neha", "Ravi", "Simran", "Karan"];
+    function showNames() {
+      let output = "";
+      names.forEach(name => output += <p>${name}</p>);
+      document.getElementById("namesContainer").innerHTML = output;
+    }
+
+    // 2
+    let fruits = ["Apple", "Banana", "Mango", "Grapes"];
+    function showLength() {
+      document.getElementById("fruitCount").innerText = fruits.length;
+    }
+
+    // 3
+    let cities = ["Delhi", "Mumbai", "Bangalore", "Kolkata"];
+    function showCities() {
+      document.getElementById("firstCity").innerText = cities[0];
+      document.getElementById("lastCity").innerText = cities[cities.length - 1];
+    }
+
+    // 4
+    let colors = ["red", "green", "blue"];
+    function changeColor() {
+      colors[1] = "black";
+      document.getElementById("colorsOutput").innerText = colors.join(", ");
+    }
+
+    // 5
+    let animals = ["Dog", "Cat", "Lion", "Tiger", "Elephant"];
+    function listAnimals() {
+      let items = "";
+      animals.forEach(animal => items += <li>${animal}</li>);
+      document.getElementById("animalList").innerHTML = items;
+    }
+
+    // 6
+    let countries = ["India", "USA", "Japan"];
+    function addCountry() {
+      countries.push("Australia");
+      document.getElementById("countriesOutput").innerText = countries.join(", ");
+    }
+
+    // 7
+    let numbers = [5, 1, 9, 2, 7];
+    function sortNumbers() {
+      let sorted = [...numbers].sort((a, b) => a - b);
+      document.getElementById("sortedNumbers").innerText = sorted.join(", ");
+    }
+
+    // 8
+    let words = ["JavaScript", "is", "awesome"];
+    function joinWords() {
+      let sentence = words.join(" ");
+      document.getElementById("sentenceOutput").innerText = sentence;
+    }
+
+    // 9
+    let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    function reverseDays() {
+      let reversed = [...days].reverse();
+      document.getElementById("daysOutput").innerText = reversed.join(", ");
+    }
+
+    // 10
+    let students = ["Riya", "Arjun", "Priya"];
+    function showLastStudent() {
+      let last = students[students.length - 1];
+      document.getElementById("lastStudent").innerText = last;
+    }
+
+    function addName() {
+      const ip = document.getElementById('ip').value;
+      const div = document.getElementById('op');
+      const newText = document.createElement('h1');
+      newText.textContent = ip;
+      newText.style.color = 'blue';
+      div.appendChild(newText);
+      
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Operations Projects</title>
+</head>
+<body>
+  <h2>1. Display Array of Names</h2>
+  <button onclick="showNames()">Show Names</button>
+  <div id="namesContainer"></div>
+
+  <h2>2. Show Array Length</h2>
+  <button onclick="showLength()">Show Fruit Count</button>
+  <p id="fruitCount"></p>
+
+  <h2>3. Access First and Last City</h2>
+  <button onclick="showCities()">Show Cities</button>
+  <p id="firstCity"></p>
+  <p id="lastCity"></p>
+
+  <h2>4. Change Color in Array</h2>
+  <button onclick="changeColor()">Change Color</button>
+  <p id="colorsOutput"></p>
+
+  <h2>5. Loop Through Animal Array</h2>
+  <button onclick="listAnimals()">Show Animals</button>
+  <ul id="animalList"></ul>
+
+  <h2>6. Push and Print Country</h2>
+  <button onclick="addCountry()">Add Country</button>
+  <div id="countriesOutput"></div>
+
+  <h2>7. Sort Numbers</h2>
+  <button onclick="sortNumbers()">Sort</button>
+  <p id="sortedNumbers"></p>
+
+  <h2>8. Join Words into Sentence</h2>
+  <button onclick="joinWords()">Join Words</button>
+  <p id="sentenceOutput"></p>
+
+  <h2>9. Reverse Days</h2>
+  <button onclick="reverseDays()">Reverse Days</button>
+  <p id="daysOutput"></p>
+
+  <h2>10. Show Last Student Name</h2>
+  <button onclick="showLastStudent()">Show Last Name</button>
+  <p id="lastStudent"></p>
+
+  <input type="text" id="ip">
+  <button onclick="addName()" id="btn">Add</button>
+  <div id="op"></div>
+
+  <script>
+    // 1
+    let names = ["Amit", "Neha", "Ravi", "Simran", "Karan"];
+    function showNames() {
+      let output = "";
+      names.forEach(name => output += <p>${name}</p>);
+      document.getElementById("namesContainer").innerHTML = output;
+    }
+
+    // 2
+    let fruits = ["Apple", "Banana", "Mango", "Grapes"];
+    function showLength() {
+      document.getElementById("fruitCount").innerText = fruits.length;
+    }
+
+    // 3
+    let cities = ["Delhi", "Mumbai", "Bangalore", "Kolkata"];
+    function showCities() {
+      document.getElementById("firstCity").innerText = cities[0];
+      document.getElementById("lastCity").innerText = cities[cities.length - 1];
+    }
+
+    // 4
+    let colors = ["red", "green", "blue"];
+    function changeColor() {
+      colors[1] = "black";
+      document.getElementById("colorsOutput").innerText = colors.join(", ");
+    }
+
+    // 5
+    let animals = ["Dog", "Cat", "Lion", "Tiger", "Elephant"];
+    function listAnimals() {
+      let items = "";
+      animals.forEach(animal => items += <li>${animal}</li>);
+      document.getElementById("animalList").innerHTML = items;
+    }
+
+    // 6
+    let countries = ["India", "USA", "Japan"];
+    function addCountry() {
+      countries.push("Australia");
+      document.getElementById("countriesOutput").innerText = countries.join(", ");
+    }
+
+    // 7
+    let numbers = [5, 1, 9, 2, 7];
+    function sortNumbers() {
+      let sorted = [...numbers].sort((a, b) => a - b);
+      document.getElementById("sortedNumbers").innerText = sorted.join(", ");
+    }
+
+    // 8
+    let words = ["JavaScript", "is", "awesome"];
+    function joinWords() {
+      let sentence = words.join(" ");
+      document.getElementById("sentenceOutput").innerText = sentence;
+    }
+
+    // 9
+    let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    function reverseDays() {
+      let reversed = [...days].reverse();
+      document.getElementById("daysOutput").innerText = reversed.join(", ");
+    }
+
+    // 10
+    let students = ["Riya", "Arjun", "Priya"];
+    function showLastStudent() {
+      let last = students[students.length - 1];
+      document.getElementById("lastStudent").innerText = last;
+    }
+
+    function addName() {
+      const ip = document.getElementById('ip').value;
+      const div = document.getElementById('op');
+      const newText = document.createElement('h1');
+      newText.textContent = ip;
+      newText.style.color = 'blue';
+      div.appendChild(newText);
+      
+    }
+  </script>
+</body>
+</html> -->

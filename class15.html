@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Number Fact Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+  <h1 class="text-6xl font-bold text-center text-purple-800  mb-2">
+    Discover Cool Facts About Numbers
+  </h1>
+  <p class="text-center text-purple-600 mb-6">
+    Type in a number and we'll show you something fascinating about it.<br>
+    That's it. Simple. Fun. Addictive.
+  </p>
+
+  <div class="bg-white rounded-xl shadow-md p-6 w-full max-w-md text-center">
+    <input 
+      type="number" 
+      placeholder="7" 
+      class="border border-gray-300 rounded-md px-4 py-2 text-lg focus:outline-none focus:ring-2 focus:ring-blue-400 w-1/2 mb-4"
+    />
+    <button class="bg-purple-600 text-white px-4 py-2 rounded-md ml-2 hover:bg-indigo-700 transition">
+      Get Fact
+    </button>
+    <p class="mt-6 text-purple-700">
+      7 is the approximate number of years in the lifespan of Irish Wolfhound dogs.
+    </p>
+  </div>
+
+  <p class="mt-8 text-sm text-gray-400">
+    Powered by <a href="http://numbersapi.com" class="underline">Numbers API</a>
+  </p>
+</body>
+</html>

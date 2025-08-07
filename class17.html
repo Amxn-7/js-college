@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>z
+    <aside class="ml-0">
+        kejfhreiufhd
+    </aside>
+    <div class="bg-blue-50 min-h-screen flex items-center justify-center">
+
+        <div class="bg-white w-full max-w-2xl p-10 rounded-xl shadow-md text-center">
+            <p class="text-gray-500 text-2xl mb-8">
+                Hello, <span class="font-semibold text-black">Ready to<br>Know the weather of your City?</span>
+            </p>
+            
+            <div class="flex items-center justify-center gap-4 mb-8">
+                <input id="cityInput" class="border border-blue-600 rounded-md px-4 py-2 text-lg w-2/3" type="text" placeholder="Enter city name">
+                <button id="getWeatherBtn" class="bg-black text-white px-4 py-2 rounded-md font-semibold">Get Weather</button>
+            </div>
+    
+            <div id="weatherResult" class="bg-gray-100 p-4 rounded-md flex justify-between items-center shadow-md">
+                <div class="text-left">
+                    <p id="city-name-para" class="font-semibold">City Name</p>
+                    <p id="latitude" class="text-sm text-gray-500">00:00 GMT+5</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <p id="temprature" class="text-xl font-bold">25°C</p>
+                    <img id="weatherIcon" src="https://i.pinimg.com/736x/7c/44/de/7c44de4d01345d182d239f4ea037f471.jpg" alt="Weather Icon" class="w-10 h-10 object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

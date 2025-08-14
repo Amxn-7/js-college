@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="class19.js"></script>
+</head>
+
+<body class="bg-[#0f0f0f] text-white font-sans">
+
+    <div class="flex">
+
+        <!-- Sidebar -->
+        <aside class="w-60 bg-[#0f0f0f] h-screen fixed left-0 top-0 border-r border-gray-800 p-4 flex-col space-y-8 hidden md:flex">
+            <div class="flex items-center space-x-2 mb-6 h-10">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/32x32/ff0000/ffffff?text=YT';"
+                     class="w-8 h-8">
+                <span class="font-semibold text-lg">YouTube</span>
+            </div>
+
+            <nav class="space-y-4 text-sm">
+                <div class="space-y-3 justify-center">
+                    <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>🏠</span> <span>Home</span></a>
+                    <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>🎬</span> <span>Shorts</span></a>
+                    <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>📺</span> <span>Subscription</span></a>
+                </div>
+                <hr class="border-gray-700 my-4">
+                <div class="space-y-3">
+                     <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>📚</span> <span>Library</span></a>
+                     <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>🕒</span> <span>History</span></a>
+                     <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>📹</span> <span>Your Videos</span></a>
+                     <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>⏱</span> <span>Watch Later</span></a>
+                     <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>👍</span> <span>Liked Videos</span></a>
+                </div>
+                 <hr class="border-gray-700 my-4">
+                 <div>
+                    <h2 class="uppercase text-xs text-gray-400 mb-2 px-2">Explore</h2>
+                    <div class="space-y-3">
+                        <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>🎵</span> <span>Music</span></a>
+                        <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>🎥</span> <span>Movie</span></a>
+                        <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>🔴</span> <span>Live</span></a>
+                        <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>🎮</span> <span>Game</span></a>
+                        <a href="#" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800"><span>📰</span> <span>News</span></a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="md:ml-60 flex-1 p-4">
+
+            <!-- Header Search -->
+            <div class="flex items-center space-x-3 mb-4 sticky top-0 bg-[#0f0f0f] py-2 z-10">
+                <input type="text" placeholder="Search" id="search-text"
+                    class="bg-[#121212] px-4 py-2 rounded-full text-sm w-full border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500">
+                <button onclick="getData()" class="bg-[#222222] p-3 rounded-full hover:bg-gray-700 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </button>
+                <button class="bg-[#222222] p-3 rounded-full hover:bg-gray-700 transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8h-1a6 6 0 11-5.93-6V4a1 1 0 112 0v1a1 1 0 11-2 0V4a3 3 0 013-3z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+
+            <!-- Topic Pills -->
+            <div class="flex space-x-2 overflow-x-auto mb-4 pb-2">
+                <button class="bg-white text-black px-4 py-1 rounded-lg text-sm whitespace-nowrap">All</button>
+                <button class="bg-[#272727] px-4 py-1 rounded-lg text-sm whitespace-nowrap hover:bg-gray-700">JavaScript</button>
+                <button class="bg-[#272727] px-4 py-1 rounded-lg text-sm whitespace-nowrap hover:bg-gray-700">Music</button>
+                <button class="bg-[#272727] px-4 py-1 rounded-lg text-sm whitespace-nowrap hover:bg-gray-700">UI Design</button>
+                <button class="bg-[#272727] px-4 py-1 rounded-lg text-sm whitespace-nowrap hover:bg-gray-700">Game Shows</button>
+                <button class="bg-[#272727] px-4 py-1 rounded-lg text-sm whitespace-nowrap hover:bg-gray-700">ReactJS</button>
+            </div>
+            
+            <!-- Loading and Error Messages -->
+            <div id="loading" class="text-center py-10 hidden">Loading...</div>
+            <div id="error-message" class="text-center text-red-500 py-10 hidden"></div>
+
+            <!-- Video Grid Container -->
+            <div id="videos-div" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

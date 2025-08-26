@@ -72,7 +72,7 @@ function ChangeFont() {
                 <button
                     onClick={() => {
                         setSize(size+5)
-                    }} className='bg-white h-[50px] w-[50px] rounded-full w-1/6 my-auto'> +
+                    }} className='bg-white h-[50px] w-[50px] rounded-full  my-auto'> +
                 </button>
 
                 <p className="w-4/6 my-auto flex items-center justify-center font-semibold text-white" style={{fontSize: size}}>Test Text</p>
@@ -80,7 +80,7 @@ function ChangeFont() {
                 <button
                     onClick={() => {
                         setSize(size-5)
-                    }} className='bg-white h-[50px] w-[50px] rounded-full w-1/6 my-auto'> -
+                    }} className='bg-white h-[50px] w-[50px] rounded-full my-auto'> -
                 </button>
             </div>
         </div>

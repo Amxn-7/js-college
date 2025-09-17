@@ -7,7 +7,15 @@ function App() {
     const latitude = geoData.results[0].latitude;
     const longitude = geoData.results[0].longitude;
     console.log("Longitude: "+latitude+"Latitude: "+longitude);
+
+    const weatherres = await fetch("https://api.open-meteo.com/v1/forecast?latitude=59.8&longitude=65.4&current_weather=true&hourly=temperature_2m,weather_code");
+    const weatherdata = await weatherres.json();
+    console.log(weatherdata);
+    console.log("Current temperature: "+weatherdata.current_weather.temperature);
+    // console.log("temoperature: "+weatherdata.temperature_);
     
+    
+
     
   };
 

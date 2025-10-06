@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Data Form</title>
+    <!-- Load Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to ensure the Inter font is used and the background is dark */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1f2937; /* Dark gray background */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+
+        // Function to handle form submission
+        function handleSubmit(event) {
+            // Prevent the default form submission action (page reload)
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Extract data from the form
+            const data = {
+                name: formData.get('name'),
+                age: formData.get('age'),
+                gender: formData.get('gender')
+            };
+
+            // Log the data to the console
+            console.log('--- Form Submitted Data ---');
+            console.log('Name:', data.name);
+            console.log('Age:', data.age);
+            console.log('Gender:', data.gender);
+
+            // Display a success message in the UI
+            const messageBox = document.getElementById('message-box');
+            messageBox.textContent = 'Form submitted successfully! Check the console for data.';
+            messageBox.classList.remove('hidden', 'bg-red-500');
+            messageBox.classList.add('bg-green-500');
+            
+            // Optionally, reset the form after successful submission
+            form.reset();
+        }
+
+        // Apply the submit handler to the form when the document loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('user-form');
+            form.addEventListener('submit', handleSubmit);
+        });
+    </script>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="w-full max-w-lg bg-gray-800 p-8 md:p-10 rounded-xl shadow-2xl transition-all duration-300">
+        <h1 class="text-3xl font-bold text-white mb-6 border-b border-gray-700 pb-3">User Profile Submission</h1>
+        
+        <!-- Submission Message Box -->
+        <div id="message-box" class="hidden p-3 mb-4 text-sm font-medium text-white rounded-lg" role="alert">
+            
+        </div>
+
+        <form id="user-form" class="space-y-6">
+
+            <!-- Name Field -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your full name"
+                    required 
+                    class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition duration-150 ease-in-out placeholder-gray-400"
+                >
+            </div>
+
+            <!-- Age Field -->
+            <div>
+                <label for="age" class="block text-sm font-medium text-gray-300 mb-1">Age</label>
+                <input 
+                    type="number" 
+                    id="age" 
+                    name="age" 
+                    placeholder="e.g., 30"
+                    min="1"
+                    max="120"
+                    required 
+                    class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition duration-150 ease-in-out placeholder-gray-400"
+                >
+            </div>
+
+            <!-- Gender Field (Radio Buttons) -->
+            <div>
+                <label class="block text-sm font-medium text-gray-300 mb-2">Gender</label>
+                <div class="flex flex-wrap gap-x-6 gap-y-3">
+                    
+                    <!-- Male Option -->
+                    <div class="flex items-center">
+                        <input 
+                            id="gender-male" 
+                            name="gender" 
+                            type="radio" 
+                            value="Male" 
+                            required
+                            class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500 bg-gray-700"
+                        >
+                        <label for="gender-male" class="ml-2 text-sm text-gray-300">Male</label>
+                    </div>
+
+                    <!-- Female Option -->
+                    <div class="flex items-center">
+                        <input 
+                            id="gender-female" 
+                            name="gender" 
+                            type="radio" 
+                            value="Female" 
+                            class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500 bg-gray-700"
+                        >
+                        <label for="gender-female" class="ml-2 text-sm text-gray-300">Female</label>
+                    </div>
+
+                    <!-- Other Option -->
+                    <div class="flex items-center">
+                        <input 
+                            id="gender-other" 
+                            name="gender" 
+                            type="radio" 
+                            value="Other" 
+                            class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500 bg-gray-700"
+                        >
+                        <label for="gender-other" class="ml-2 text-sm text-gray-300">Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button 
+                    type="submit" 
+                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-lg shadow-lg text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out transform hover:scale-[1.01] active:scale-95"
+                >
+                    Submit Form Data
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

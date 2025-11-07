@@ -26,7 +26,7 @@ function CountryList() {
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error!</p>
 
-    const country = data.country;
+    const country = data.country;//
 
     console.log(data, "data");
 
